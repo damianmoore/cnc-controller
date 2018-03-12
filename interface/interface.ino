@@ -1,10 +1,10 @@
-#define LED_BLUE 6
-#define LED_GREEN 5
-#define LED_RED 3
+#define LED_RED 9
+#define LED_GREEN 10
+#define LED_BLUE 11
 
-#define BUTTON 9      // E-stop button
-#define FEED_HOLD 10    // A1 on GRBL
-#define CYCLE_START 11  // A2 on GRBL
+#define BUTTON 2       // E-stop button
+#define FEED_HOLD 3    // A1 on GRBL
+#define CYCLE_START 4  // A2 on GRBL
 
 
 #define STATUS_BOOTING 'B'
@@ -42,9 +42,9 @@ void setStatus(char status) {
     red = 0; green = 0; blue = 0;
   }
   
-  analogWrite(LED_RED, red/4);
-  analogWrite(LED_GREEN, green/4);
-  analogWrite(LED_BLUE, blue/4);
+  analogWrite(LED_RED, red);
+  analogWrite(LED_GREEN, green);
+  analogWrite(LED_BLUE, blue);
 }
 
 void sendPulse(int pin) {
